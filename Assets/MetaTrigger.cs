@@ -8,6 +8,8 @@ public class MetaTrigger : MonoBehaviour
 
     void OnTriggerEnter(Collider other)
     {
+        Debug.Log("MetaTrigger: entró " + other.name + " con tag " + other.tag);
+
         if (!other.CompareTag(tagJugador)) return;
 
         Debug.Log("¡Meta alcanzada!");
